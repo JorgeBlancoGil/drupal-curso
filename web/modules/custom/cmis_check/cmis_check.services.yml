@@ -1,0 +1,5 @@
+services:
+  cmis_check.event_subscriber:
+    class: Drupal\cmis_check\EventSubscriber\CmisCheckSubscriber
+    tags:
+      - { name: event_subscriber }

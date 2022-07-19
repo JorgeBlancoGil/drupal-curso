@@ -1,0 +1,19 @@
+services:
+  custom_access.route_subscriber:
+    class: Drupal\custom_access\EventSubscriber\CustomAccessRouteSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  access_check.custom_access.document:
+    class: Drupal\custom_access\Access\DocumentAccessChecker
+    tags:
+      - { name: access_check }
+
+  custom_access.event_subscriber:
+    class: Drupal\custom_access\EventSubscriber\CustomAccessSubscriber
+    tags:
+      - { name: event_subscriber }
+      - arguments:
+          [
+            "@redirect.destination"
+          ]
