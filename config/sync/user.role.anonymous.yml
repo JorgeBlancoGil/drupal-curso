@@ -5,6 +5,7 @@ dependencies:
   config:
     - filter.format.restricted_html
   module:
+    - config_split
     - filter
     - search
     - system
@@ -16,5 +17,6 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
+  - 'administer configuration split'
   - 'search content'
   - 'use text format restricted_html'
