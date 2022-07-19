@@ -14,5 +14,6 @@ theme: {  }
 blacklist: {  }
 graylist:
   - system.performance
+  - system.site
 graylist_dependents: true
 graylist_skip_equal: true
