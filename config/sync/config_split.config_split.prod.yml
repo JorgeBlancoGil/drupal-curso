@@ -1,0 +1,15 @@
+uuid: 95d26d0f-e0a0-4d3e-8c7e-b94fc63994f5
+langcode: en
+status: true
+dependencies: {  }
+id: prod
+label: PROD
+description: 'PRODUCTION CONFIG'
+weight: 0
+folder: ../config/prod
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
