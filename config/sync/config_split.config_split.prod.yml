@@ -10,6 +10,7 @@ folder: ../config/prod
 module: {  }
 theme: {  }
 blacklist: {  }
-graylist: {  }
+graylist:
+  - system.site
 graylist_dependents: true
 graylist_skip_equal: true
