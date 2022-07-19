@@ -1,0 +1,32 @@
+uuid: 3ad4a0f4-562e-426b-bbe6-5be254d3a52e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.documento_internacional.body
+    - field.field.node.documento_internacional.field_document_access
+    - node.type.documento_internacional
+  module:
+    - text
+    - user
+id: node.documento_internacional.teaser
+targetEntityType: node
+bundle: documento_internacional
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_document_access: true

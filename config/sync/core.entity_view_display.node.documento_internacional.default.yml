@@ -1,0 +1,30 @@
+uuid: 7f9dd774-9795-49a6-a148-47c4c4a312b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.documento_internacional.body
+    - field.field.node.documento_internacional.field_document_access
+    - node.type.documento_internacional
+  module:
+    - text
+    - user
+id: node.documento_internacional.default
+targetEntityType: node
+bundle: documento_internacional
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_document_access: true
