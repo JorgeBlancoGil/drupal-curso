@@ -25,6 +25,7 @@
         "drupal/devel": "^4.1",
         "drupal/devel_kint_extras": "^1.0",
         "drupal/facets": "^2.0",
+        "drupal/pathauto": "^1.10",
         "drupal/search_api": "^1.25",
         "drush/drush": "^11.0"
     },

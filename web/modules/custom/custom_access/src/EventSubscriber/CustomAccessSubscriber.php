@@ -2,12 +2,10 @@
 
 namespace Drupal\custom_access\EventSubscriber;
 
-use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+
 use Drupal\Core\EventSubscriber\HttpExceptionSubscriberBase;
 use Symfony\Component\HttpKernel\Event\ExceptionEvent;
-use Symfony\Component\HttpKernel\Event\RequestEvent;
-use Symfony\Component\HttpKernel\Event\ResponseEvent;
-use Symfony\Component\HttpKernel\KernelEvents;
+
 
 /**
  * Custom Access event subscriber.
@@ -35,10 +33,10 @@ class CustomAccessSubscriber extends HttpExceptionSubscriberBase
   {
 
     $request = $event->getRequest();
+
     $currentPath = $request->getPathInfo();
     if (strpos($currentPath, 'admin')!== false) {
       \Drupal::logger('cmis_check')->info("Bien");
-      
     }
 
   

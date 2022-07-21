@@ -1,0 +1,22 @@
+uuid: 50623bab-7bac-43cf-bd7b-e1e25d370f16
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: book_patter
+label: 'Book Patter'
+type: 'canonical_entities:node'
+pattern: '/book/[node:title]'
+selection_criteria:
+  48afca74-71f2-4762-a3cd-5adfc478a622:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 48afca74-71f2-4762-a3cd-5adfc478a622
+    context_mapping:
+      node: node
+    bundles:
+      book: book
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -8,3 +8,9 @@ services:
     class: Drupal\custom_access\Access\DocumentAccessChecker
     tags:
       - { name: access_check }
+
+  custom_access.event_subscriber:
+    class: Drupal\custom_access\EventSubscriber\CustomAccessSubscriber
+    arguments: ["@redirect.destination"]
+    tags:
+      - { name: event_subscriber }

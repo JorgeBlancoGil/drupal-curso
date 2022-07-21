@@ -5,9 +5,10 @@ dependencies:
   config:
     - filter.format.restricted_html
   module:
+    - comment
     - config_split
     - filter
-    - search
+    - media
     - system
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
@@ -16,7 +17,9 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
+  - 'access comments'
   - 'access content'
   - 'administer configuration split'
-  - 'search content'
+  - 'post comments'
   - 'use text format restricted_html'
+  - 'view media'

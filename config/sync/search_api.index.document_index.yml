@@ -1,0 +1,55 @@
+uuid: 6de36a32-28ee-4d7d-8288-7beb076415ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - search_api.server.db_server
+  module:
+    - node
+    - search_api
+id: document_index
+name: 'Document Index'
+description: ''
+read_only: false
+field_settings:
+  field_tags:
+    label: Tags
+    datasource_id: 'entity:node'
+    property_path: field_tags
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_tags
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - documento_internacional
+        - documento_web
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: db_server

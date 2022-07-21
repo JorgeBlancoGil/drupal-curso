@@ -1,0 +1,24 @@
+uuid: 6eae9cb0-9b8a-45df-815c-982b2fe1641f
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.tags
+  module:
+    - facets
+  theme:
+    - olivero
+id: tags
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: 'facet_block:tags'
+settings:
+  id: 'facet_block:tags'
+  label: Tags
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: tags
+visibility: {  }

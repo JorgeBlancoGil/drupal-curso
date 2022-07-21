@@ -1,0 +1,29 @@
+uuid: 6c78302e-105b-4d20-b12d-496890a79422
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.documento_internacional
+    - taxonomy.vocabulary.tags
+id: node.documento_internacional.field_tags
+field_name: field_tags
+entity_type: node
+bundle: documento_internacional
+label: Tags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

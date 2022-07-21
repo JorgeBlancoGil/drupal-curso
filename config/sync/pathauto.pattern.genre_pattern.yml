@@ -1,0 +1,22 @@
+uuid: 32e82f45-c39b-4b2b-8674-3a195f6faa48
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: genre_pattern
+label: 'Genre Pattern'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/genre/[term:name]'
+selection_criteria:
+  7354176b-86fc-47b7-a3d3-50aebf1120f0:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 7354176b-86fc-47b7-a3d3-50aebf1120f0
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      genre: genre
+selection_logic: and
+weight: -5
+relationships: {  }

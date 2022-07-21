@@ -46,7 +46,6 @@ class DocumentAccessChecker implements AccessInterface
 
   public function access(Route $route, AccountInterface $account)
   {
-    \Drupal::logger('cmis_url_check')->notice(print_r($route));
     return AccessResult::forbidden();
   }
 }
